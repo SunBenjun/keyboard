@@ -1,5 +1,5 @@
 /*
- * @Description: 网页键盘 实现功能
+ * @Description: 网页键盘 实现原理通过模拟自定义输入框和模拟键盘来实现操作
  * @version: 1.0
  * @Author: sunbenjun
  * @Date: 2019-08-27 13:13:51

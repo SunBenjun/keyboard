@@ -1,0 +1,187 @@
+.android .custom-keyborad {
+    font-weight: bold;
+}
+
+.iphoneX,
+.iphoneXR,
+.iphoneXSMax {
+    .custom-keyborad {
+        height: 6.933333rem;
+        background: #fff;
+
+        .keyboard-box {
+            border-bottom: 1px solid #F0EFF4;
+        }
+    }
+}
+
+.keyboard-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6rem;
+    z-index: 1;
+}
+
+.custom-keyborad {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: .2s;
+    -webkit-transition-property: height;
+    -webkit-transition-duration: .2s;
+
+    .prevent-through {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .keyboard-box {
+        height: 6.026667rem;
+        border-top: .266667rem solid #F0EFF4;
+        display: -webkit-box;
+        font-size: .4rem;
+        color: #4A4A4A;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+
+
+        .item {
+            background: #fff;
+            -webkit-box-flex: 1;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            width: 0;
+
+            &:first-child {
+                .li {
+                    &:last-child {
+                        background: #F0EFF4;
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid rgba(171, 175, 183, .3);
+
+                .li:not(:last-child) {
+                    border-bottom: 1px solid rgba(171, 175, 183, .3);
+                }
+            }
+
+            &:last-child {
+                .li {
+
+                    &:first-child {
+                        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAoCAMAAACCR/kEAAAAbFBMVEUAAABKSkozMzM0NDRDQ0M0NDQ3NzczMzMzMzM0NDQ0NDQzMzMzMzM1NTUzMzM0NDQ1NTUzMzMzMzM0NDQ0NDQ1NTU2NjY0NDQzMzMzMzM0NDQzMzMzMzM1NTU6Ojo0NDRJSUk0NDQ6OjozMzOZPy97AAAAI3RSTlMAA/yjBeMc7PBjYrCmOPQxLrSrWDo0EujY05aKaUMaTwd1H1duSV4AAAEQSURBVEjHrdXbDoIwDAbggVNwKh6meFa07/+Okiam44fJ0tgLsoV8jEHXmr/F7ZxTLKrTtR5E2YR+R/EcVtUzM7Go7wsiP6TK/cgeqHygWoqKxpImfbUyY7GmojO3ScrYiupwumM1HlOaRZXNYA1kog5y65WXPtz1JT/eB5hdUBGoR05E824OnIH1lXkTO1Ht9BQwUWsTxuXrJN88MFCyADsZArNbUT0HSljTqg0qcaI6zIJCxxdnkF1ZxZwoYEeCnAfHSsF4Y4qXZKf4JOxUP8Ahg/VAORmY9ORy4TA5lV34CJ96cBwcnLRj6uCYJhWFqlcUNCWogS+pKnjK8qor5srWoWxUqrboVE3YK1u+Pj4UCjiF+uT9iwAAAABJRU5ErkJggg==);
+                        background-size: .72rem;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        text-indent: -1000px;
+                        border-bottom: 1px solid rgba(171, 175, 183, .3);
+                        color: transparent;
+                    }
+
+                    &:last-child {
+                        background: rgb(0, 122, 255);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .li {
+                text-align: center;
+                -webkit-box-flex: 1;
+                display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;
+            }
+        }
+    }
+}
+
+.android {
+    .custom-input {
+        .value {
+            .blinker {
+                width: 1px;
+                background: black;
+                top: .293333rem;
+                bottom: .293333rem;
+            }
+        }
+    }
+}
+
+.custom-input {
+    position: relative;
+
+    .value {
+        em {
+            font-style: normal;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .blinker {
+            -webkit-animation-name: blinker;
+            animation-name: blinker;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            display: inline-block;
+            width: 2px;
+            top: .24rem;
+            bottom: .24rem;
+            border-radius: 3px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            background: #486ff2;
+            position: absolute;
+        }
+
+        @-webkit-keyframes blinker {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blinker {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    }
+
+    .placeholder {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+    }
+}

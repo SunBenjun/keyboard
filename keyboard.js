@@ -1,3 +1,22 @@
+/*
+ * @Description: 网页键盘 实现功能
+ * @version: 1.0
+ * @Author: sunbenjun
+ * @Date: 2019-08-27 13:13:51
+ * @example:
+    this.keyBoard = new KeyBoard({
+        mountDom: '#app', // 键盘挂载dom
+        inputDom: '.custom-input', // 键盘对应模拟输入框
+        nativeInputDom: '.input', // 原生输入框
+        maxLength: 14, // 输入框最多可输入位数
+        placeHolder: _this.placeHolder, // 输入框默认占位符
+        inputFocus: [],
+        // 键盘回调 obj返回键盘点击的数据 _ 为当前键盘
+        callback: function (obj, _) {},
+        focus: function () {},
+        blur: function () {}
+    });
+*/
 (function (exports) {
     'use strict';
     var tool = {
